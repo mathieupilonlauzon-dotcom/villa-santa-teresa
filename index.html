@@ -75,7 +75,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .mosaic .w{grid-column:span 2}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
 .split>*{min-width:0}
-.split img{width:100%;border-radius:22px;display:block;aspect-ratio:4/5;object-fit:cover}
+.split img{width:100%;border-radius:22px;display:block;aspect-ratio:1;object-fit:cover}
 ul.tick{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
 ul.tick li{padding-left:28px;position:relative}
 ul.tick li::before{content:"";position:absolute;left:2px;top:.6em;width:13px;height:7px;border-left:2px solid var(--pool);border-bottom:2px solid var(--pool);transform:rotate(-45deg)}
@@ -191,10 +191,10 @@ footer a{color:var(--pool)}
 
 <script>
 var PHONE="15147748265";
-var IM={"sunpool": "img/sunpool.jpg", "hero": "img/hero.jpg", "pool2": "img/pool2.jpg", "living2": "img/living2.jpg", "kitchen": "img/kitchen.jpg", "ext": "img/ext.jpg", "terrace": "img/terrace.jpg", "sun1": "img/sun1.jpg", "sun3": "img/sun3.jpg", "sun5": "img/sun5.jpg", "bed2": "img/bed2.jpg", "doors": "img/doors.jpg", "road": "img/road.jpg", "aracari": "img/aracari.jpg", "parrot": "img/parrot.jpg", "fox": "img/fox.jpg", "tayra": "img/tayra.jpg", "coati": "img/coati.jpg", "tamandua": "img/tamandua.jpg", "map": "img/map.jpg", "beach": "img/beach.jpg", "falls": "img/falls.jpg", "village": "img/village.jpg", "aerial": "img/aerial.jpg", "v1": "img/v1.jpg", "v2": "img/v2.jpg", "v3": "img/v3.jpg"};
+var IM={"sunpool": "img/sunpool.jpg", "hero": "img/hero.jpg", "pool2": "img/pool2.jpg", "living2": "img/living2.jpg", "kitchen": "img/kitchen.jpg", "ext": "img/ext.jpg", "terrace": "img/terrace.jpg", "sun1": "img/sun1.jpg", "sun3": "img/sun3.jpg", "sun5": "img/sun5.jpg", "bed2": "img/bed2.jpg", "doors": "img/doors.jpg", "road": "img/road.jpg", "aracari": "img/aracari.jpg", "parrot": "img/parrot.jpg", "fox": "img/fox.jpg", "tayra": "img/tayra.jpg", "coati": "img/coati.jpg", "tamandua": "img/tamandua.jpg", "mango": "img/mango.jpg", "map": "img/map.jpg", "beach": "img/beach.jpg", "falls": "img/falls.jpg", "village": "img/village.jpg", "aerial": "img/aerial.jpg", "v1": "img/v1.jpg", "v2": "img/v2.jpg", "v3": "img/v3.jpg"};
 var VID={"v1": "vid/v1.mp4", "v2": "vid/v2.mp4", "v3": "vid/v3.mp4"};
-var ALL=["sunpool","hero","pool2","living2","kitchen","ext","terrace","sun1","bed2","road","sun3","sun5"];
-var G={all:ALL,ext:["hero","ext","road"],int:["living2","kitchen","bed2"],pool:["sunpool","pool2","terrace"],sun:["sun1","sunpool","sun3","sun5"]};
+var ALL=["sunpool","hero","pool2","living2","kitchen","mango","terrace","sun1","bed2","road","sun3","sun5"];
+var G={all:ALL,ext:["hero","mango","ext","road"],int:["living2","kitchen","bed2"],pool:["sunpool","pool2","terrace"],sun:["sun1","sunpool","sun3","sun5"]};
 var NAT=["tamandua","aracari","fox","tayra","coati","parrot"];
 var WIDE={sunpool:1,sun1:1,ext:1,road:1,hero:1,sun2:1,sun3:1,sun4:1,sun5:1,pool1:1};
 var DAYIMG=["sun1","beach","falls","pool2","sunpool","village"];
@@ -340,7 +340,7 @@ $("#cp").addEventListener("click",function(){var t=TX[L],b=$("#cp");
 $("#hero").style.backgroundImage="url("+IM.sunpool+")";
 $("#reve").style.backgroundImage="url("+IM.sun1+")";
 $("#aerial").style.backgroundImage="url("+IM.aerial+")";
-$("#splitimg").src=IM.doors;$("#mapimg").src=IM.map;$("#aerimg").src=IM.aerial;
+$("#splitimg").src=IM.mango;$("#mapimg").src=IM.map;$("#aerimg").src=IM.aerial;
 ["v1","v2","v3"].forEach(function(k){var v=$("#"+k);v.poster=IM[k];v.src=VID[k]});
 fill();
 </script>
